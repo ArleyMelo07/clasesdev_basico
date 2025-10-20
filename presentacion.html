@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentación del Curso - Programación Básica</title>
+  <link rel="stylesheet" href="./styles/style-presentacion.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>💻 Curso de Programación Básica</h1>
+      <p>Aprende desde cero los fundamentos de la programación con ejemplos prácticos y explicaciones claras.</p>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="intro">
+      <img src="https://cdn-icons-png.flaticon.com/512/2721/2721292.png" alt="Programación" class="hero-image" />
+      <h2>Bienvenido(a)</h2>
+      <p>Este curso está diseñado para que cualquier persona, sin importar su nivel de conocimiento, pueda aprender a programar paso a paso de manera sencilla y divertida. 🌟</p>
+      
+      <a href="clase1.html" class="btn-iniciar">🚀 Iniciar Aprendizaje</a>
+    </section>
+
+    <section class="accordion-section">
+      <h2>📘 Clases Disponibles</h2>
+
+      <div class="accordion">
+        <button class="accordion-btn">Clase 1 — Introducción a la Programación</button>
+        <div class="accordion-content">
+          <p>Conoce qué es la programación, sus lenguajes más usados, y crea tu primer "Hola Mundo" en varios lenguajes.</p>
+          <a href="clase1.html" class="link-clase">Ir a Clase 1</a>
+        </div>
+
+        <button class="accordion-btn">Clase 2 — Lógica y Variables en Python</button>
+        <div class="accordion-content">
+          <p>Aprende cómo piensa un programador, qué es la lógica de programación, y cómo usar variables en Python.</p>
+          <a href="proximamente.html" class="link-clase">Ir a Clase 2</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 — Curso de Programación Básica · Profesor: Ing. Arley Melo</p>
+  </footer>
+
+  <script>
+    // Script para el acordeón
+    const buttons = document.querySelectorAll(".accordion-btn");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const content = btn.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

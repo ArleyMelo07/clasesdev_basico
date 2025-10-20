@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 1 - Introducción a la Programación</title>
+  <link rel="stylesheet" href="./styles/clase1.css">
+</head>
+<body>
+  <header>
+    <h1>Clase 1: Introducción a la Programación</h1>
+    <p>Duración: 1 hora y 30 minutos</p>
+  </header>
+
+  <section>
+    <h2>1. Bienvenida</h2>
+    <p>Bienvenidos al fascinante mundo de la programación. A lo largo de este curso aprenderemos a comunicarnos con las computadoras, entendiendo cómo piensan y cómo podemos darles instrucciones paso a paso para resolver problemas.</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721270.png" alt="Bienvenida" class="ilustracion">
+  </section>
+
+  <section>
+    <h2>2. ¿Qué es la programación?</h2>
+    <p>La programación es el proceso de crear un conjunto de instrucciones que le dicen a una computadora cómo realizar una tarea. Es el lenguaje con el que los humanos le hablamos a las máquinas.</p>
+    <p>Podemos comparar programar con dar una receta: si seguimos los pasos correctamente, obtendremos el resultado deseado.</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721294.png" alt="Programación" class="ilustracion">
+  </section>
+
+  <section>
+    <h2>3. ¿Qué es un algoritmo?</h2>
+    <p>Un algoritmo es una secuencia ordenada de pasos que permiten resolver un problema o realizar una tarea. Es la base de toda programación.</p>
+    <p>Por ejemplo, un algoritmo para preparar un sándwich sería:</p>
+    <ol>
+      <li>Tomar el pan</li>
+      <li>Agregar los ingredientes</li>
+      <li>Tapar con otra rebanada</li>
+      <li>Servir</li>
+    </ol>
+    <img src="https://cdn-icons-png.flaticon.com/512/924/924915.png" alt="Algoritmo" class="ilustracion">
+  </section>
+
+  <section>
+    <h2>4. ¿Qué es un lenguaje de programación?</h2>
+    <p>Un lenguaje de programación es un sistema de comunicación estructurado que permite escribir instrucciones que una computadora puede entender y ejecutar. Existen muchos lenguajes, cada uno con su propósito.</p>
+    <ul>
+      <li><strong>Python:</strong> fácil de aprender y muy usado en inteligencia artificial, ciencia de datos y automatización.</li>
+      <li><strong>Java:</strong> poderoso y versátil, usado para aplicaciones empresariales y móviles (Android).</li>
+      <li><strong>PHP:</strong> enfocado en el desarrollo web, especialmente en el lado del servidor.</li>
+    </ul>
+    <div class="logos">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919852.png" alt="Logo Python" class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919854.png" alt="Logo Java" class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" alt="Logo PHP" class="logo">
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Instalación de herramientas</h2>
+
+    <h3>5.1. Visual Studio Code</h3>
+    <p>Visual Studio Code (VS Code) será nuestro editor de código. Es donde escribiremos y ejecutaremos nuestros programas.</p>
+    <ol>
+      <li>Ir a <a href="https://code.visualstudio.com/">code.visualstudio.com</a></li>
+      <li>Descargar según el sistema operativo</li>
+      <li>Instalar y abrir</li>
+      <li>Instalar la extensión “Code Runner”</li>
+    </ol>
+
+    <h3>5.2. Instalar Python</h3>
+    <p>Python es un lenguaje interpretado. Necesitamos su intérprete para que el sistema pueda ejecutar el código.</p>
+    <ol>
+      <li>Descargar desde <a href="https://www.python.org/downloads/">python.org</a></li>
+      <li>Seleccionar “Add Python to PATH” durante la instalación</li>
+      <li>Verificar escribiendo en la terminal: <code>python --version</code></li>
+    </ol>
+
+    <h3>5.3. Instalar Java JDK</h3>
+    <p>Para ejecutar Java necesitamos el <strong>JDK (Java Development Kit)</strong>, que incluye herramientas para compilar y ejecutar código Java.</p>
+    <ol>
+      <li>Descargar desde <a href="https://www.oracle.com/java/technologies/javase-downloads.html">Oracle</a></li>
+      <li>Instalar y agregar la variable de entorno JAVA_HOME</li>
+      <li>Verificar escribiendo en la terminal: <code>java -version</code> y <code>javac -version</code></li>
+    </ol>
+
+    <h3>5.4. Instalar PHP</h3>
+    <p>PHP necesita un intérprete para ejecutarse. Podemos usar <strong>XAMPP</strong>, que incluye Apache (servidor web) y PHP.</p>
+    <ol>
+      <li>Descargar desde <a href="https://www.apachefriends.org/">apachefriends.org</a></li>
+      <li>Instalar y ejecutar Apache</li>
+      <li>Verificar escribiendo en la terminal: <code>php -v</code></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>6. Nuestro primer programa: ¡Hola Mundo!</h2>
+
+    <h3>6.1. En Python</h3>
+    <pre><code>print("¡Hola, mundo!")</code></pre>
+    <p>La función <code>print()</code> muestra en pantalla el texto entre comillas. Se ejecuta con <strong>Ctrl + Alt + N</strong> si tienes Code Runner.</p>
+
+    <h3>6.2. En Java</h3>
+    <pre><code>public class HolaMundo {
+  public static void main(String[] args) {
+    System.out.println("¡Hola, mundo!");
+  }
+}</code></pre>
+    <p>En Java todo programa debe tener una clase. <code>System.out.println()</code> imprime texto en la consola. Para ejecutarlo:</p>
+    <ol>
+      <li>Guarda como <code>HolaMundo.java</code></li>
+      <li>Compila con: <code>javac HolaMundo.java</code></li>
+      <li>Ejecuta con: <code>java HolaMundo</code></li>
+    </ol>
+
+    <h3>6.3. En PHP</h3>
+    <pre><code>&lt;?php
+  echo "¡Hola, mundo!";
+?&gt;</code></pre>
+    <p>En PHP usamos <code>echo</code> para mostrar texto. Guarda el archivo como <code>hola.php</code> en la carpeta <code>htdocs</code> de XAMPP. Luego abre en el navegador <code>http://localhost/hola.php</code>.</p>
+  </section>
+
+  <section>
+    <h2>7. Nuestro primer programa: ¡Hola Mundo en HTML!</h2>
+
+    <h3>HTML</h3>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hola Mundo&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;¡Hola, mundo!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>El código HTML es utilizado para estructurar contenido en la web. En este caso:</p>
+    <ul>
+      <li><code>&lt;!DOCTYPE html&gt;</code>: Declara que este archivo es HTML5.</li>
+      <li><code>&lt;html&gt;</code>: Es el contenedor de toda la página.</li>
+      <li><code>&lt;head&gt;</code>: Contiene metadatos, como el título de la página.</li>
+      <li><code>&lt;body&gt;</code>: Contiene el contenido visible, en este caso un título.</li>
+    </ul>
+    <p>Para visualizar este archivo en el navegador:</p>
+    <ol>
+      <li>Crea un archivo llamado <code>index.html</code>.</li>
+      <li>Pega el código anterior dentro del archivo.</li>
+      <li>Abre el archivo en cualquier navegador y verás el mensaje “¡Hola, mundo!” en pantalla.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>8. Cierre y tarea</h2>
+    <p>Hoy aprendimos qué es la programación, los algoritmos, los lenguajes y cómo crear nuestro primer programa en diferentes lenguajes. La tarea es practicar los tres “Hola Mundo” y escribir un pequeño algoritmo en papel que describa una tarea diaria paso a paso.</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/3574/3574855.png" alt="Cierre" class="ilustracion">
+  </section>
+  
+  <section>
+    <div class="footer-nav">
+      <a class="nav-btn secondary" href="clase2.html" title="Ir a Clase 2">Ir a Clase 2 ➡️</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 — Clase 1: Lógica & Variables · Profesor: Ing. Arley Melo</p>
+  </footer>
+</body>
+</html>

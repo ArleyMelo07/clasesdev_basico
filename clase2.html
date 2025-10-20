@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clase 2 - Lógica y Variables en Python</title>
+  <link rel="stylesheet" href="./styles/clase2.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>Clase 2: Lógica de Programación & Variables en Python</h1>
+      <p class="subtitle">Aprende a pensar como programador y a gestionar información en la memoria</p>
+
+      <!-- Botón útil para volver a la clase anterior -->
+      <div class="nav-buttons">
+        <a class="nav-btn" href="clase1.html" title="Volver a Clase 1">⬅️ Volver a Clase 1</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- OBJETIVOS -->
+  <section class="card" id="objetivos">
+    <h2>🎯 Objetivos</h2>
+    <ul>
+      <li>Comprender qué es la lógica de programación y cómo se aplica en el desarrollo de software.</li>
+      <li>Aprender a diseñar algoritmos y escribir pseudocódigo.</li>
+      <li>Conocer qué son las variables y cómo Python gestiona la memoria.</li>
+      <li>Practicar con ejercicios simples de entrada, salida y manipulación de variables.</li>
+    </ul>
+  </section>
+
+  <!-- PARTE 1: LÓGICA -->
+  <section class="card" id="logica">
+    <h2>🧩 Parte 1 — Lógica de programación</h2>
+
+    <h3>¿Qué es la lógica de programación?</h3>
+    <p>
+      La <strong>lógica de programación</strong> es la capacidad de crear pasos organizados y coherentes
+      para resolver un problema. Antes de escribir código, todo programador debe pensar en la secuencia de acciones
+      necesarias para llegar al resultado deseado.
+    </p>
+
+    <div class="media-row">
+      <img class="illustration" src="https://www.alura.com.br/assets/api/cursos/logica-programacion-sumergete-programacion-javascript.svg" alt="lógica deprogramacion">
+      <div class="note">
+        <strong>Analogía:</strong> Un algoritmo es como una receta de cocina: si faltan pasos o el orden está mal,
+        el resultado no será el esperado.
+      </div>
+    </div>
+
+    <h3>Componentes del pensamiento algorítmico</h3>
+    <ol>
+      <li><strong>Entrada:</strong> los datos que recibe el programa (por ejemplo, números o texto).</li>
+      <li><strong>Proceso:</strong> las operaciones que realiza el programa (sumar, comparar, transformar, etc.).</li>
+      <li><strong>Salida:</strong> el resultado final (por ejemplo, mostrar un mensaje o guardar un archivo).</li>
+    </ol>
+
+    <h3>Diagramas de flujo</h3>
+    <p>
+      Los diagramas de flujo te ayudan a visualizar la secuencia de pasos de un algoritmo.
+      Cada figura tiene un significado:
+    </p>
+    <ul>
+      <li>Óvalo: inicio o fin.</li>
+      <li>Rectángulo: proceso.</li>
+      <li>Rombo: decisión (sí/no).</li>
+      <li>Flechas: dirección del flujo.</li>
+    </ul>
+    <img class="illustration" src="https://fernandoarciniega.com/wp-content/uploads/image-369.png" alt="diagrama de flujo">
+
+    <h3>Pseudocódigo</h3>
+    <p>
+      El pseudocódigo es una forma de escribir los pasos de un algoritmo sin usar un lenguaje real de programación.
+      Sirve para planificar lo que luego se convertirá en código.
+    </p>
+    <pre class="code">
+INICIO
+  leer nota1
+  leer nota2
+  leer nota3
+  suma = nota1 + nota2 + nota3
+  promedio = suma / 3
+  mostrar promedio
+FIN
+    </pre>
+
+    <h3>Actividad práctica</h3>
+    <p>
+      Escribe en tu cuaderno el pseudocódigo para <em>preparar un sándwich</em>.
+      Luego revisa tus pasos y verifica si tu “programa” funcionaría sin errores.
+    </p>
+  </section>
+
+  <!-- ACTIVIDAD 1: PRESENTACIONES -->
+  <section class="card" id="actividad-presentacion">
+    <h2>🧍 Actividad 1 — Presentación en Python</h2>
+    <p>
+      Ahora escribirás tu primer programa interactivo usando Python.
+      El objetivo es practicar la función <code>input()</code> para recibir datos del usuario y
+      <code>print()</code> para mostrarlos en pantalla.
+    </p>
+
+    <pre class="code">
+# Programa de presentación
+nombre = input("¿Cuál es tu nombre? ")
+edad = input("¿Cuántos años tienes? ")
+ciudad = input("¿De dónde eres? ")
+
+print("----- Presentación -----")
+print("Nombre:", nombre)
+print("Edad:", edad)
+print("Ciudad:", ciudad)
+print("------------------------")
+    </pre>
+
+    <h4>Explicación paso a paso:</h4>
+    <ol>
+      <li><strong>input()</strong>: espera que el usuario escriba algo; siempre devuelve texto (<code>str</code>).</li>
+      <li><strong>Asignación:</strong> el valor que introduces se guarda en una variable (por ejemplo, <code>nombre</code>).</li>
+      <li><strong>print()</strong>: muestra texto o variables en pantalla.</li>
+      <li>El programa se ejecuta línea por línea, de arriba hacia abajo.</li>
+    </ol>
+
+    <p class="hint">
+      💡 Prueba agregando un dato adicional, como tu materia favorita, y muestra todo en una sola línea formateada.
+    </p>
+  </section>
+
+  <!-- PARTE 2: VARIABLES -->
+  <section class="card" id="variables">
+    <h2>💾 Parte 2 — Variables y memoria</h2>
+
+    <h3>¿Qué es una variable?</h3>
+    <p>
+      Una variable es un nombre que se usa para guardar información temporal en la memoria del computador.
+      Imagina una caja con etiqueta: la etiqueta es el nombre de la variable y el contenido es su valor.
+    </p>
+
+    <div class="media-row">
+      <img class="illustration" src="https://blog.walthercuro.com/wp-content/uploads/2024/11/image-40.png" alt="memoria y variables">
+      <div class="note">
+        En Python no necesitas declarar el tipo de dato: el lenguaje lo detecta automáticamente cuando asignas un valor.
+      </div>
+    </div>
+
+    <!-- NUEVA SECCIÓN: OPERADORES DE ASIGNACIÓN Y TEMAS RELACIONADOS -->
+    <h3>Operadores de asignación (detallado)</h3>
+    <p>
+      El operador de asignación básico es <code>=</code>, que guarda un valor en una variable. Además existen operadores
+      de asignación compuesta (o aumentada) que combinan una operación y asignación en una sola instrucción.
+    </p>
+
+    <h4>Asignación básica</h4>
+    <pre class="code">
+a = 5       # a vale 5
+b = a       # b ahora referencia el mismo valor que a (5)
+    </pre>
+    <p>
+      Aquí <code>b</code> recibe el valor actual de <code>a</code>. Si luego cambias <code>a</code>, <code>b</code> no cambia automáticamente:
+    </p>
+    <pre class="code">
+a = 5
+b = a
+a = 7
+print(a)  # 7
+print(b)  # 5
+    </pre>
+
+    <h4>Asignación aumentada (operadores compuestos)</h4>
+    <p>Estos operadores son equivalentes a aplicar una operación sobre la variable y reasignarla:</p>
+    <ul>
+      <li><code>+=</code> → suma y asigna (<code>x += 2</code> es lo mismo que <code>x = x + 2</code>).</li>
+      <li><code>-=</code> → resta y asigna.</li>
+      <li><code>*=</code> → multiplica y asigna.</li>
+      <li><code>/=</code> → divide y asigna (produce float si corresponde).</li>
+      <li><code>%=</code> → módulo y asigna (resto de la división).</li>
+      <li><code>//=</code> → división entera y asigna.</li>
+      <li><code>**=</code> → potencia y asigna.</li>
+    </ul>
+
+    <pre class="code">
+x = 10
+x += 5    # x ahora vale 15
+x *= 2    # x ahora vale 30
+x -= 4    # x ahora vale 26
+    </pre>
+
+    <h4>Asignación múltiple y encadenada</h4>
+    <p>Puedes asignar varios valores en una sola línea:</p>
+    <pre class="code">
+a, b, c = 1, 2, 3
+# o asignar el mismo valor a varias variables
+x = y = z = 0
+    </pre>
+
+    <h4>Intercambiar valores (swap)</h4>
+    <p>En Python puedes intercambiar dos variables sin usar una variable temporal:</p>
+    <pre class="code">
+a = 5
+b = 10
+a, b = b, a
+# ahora a == 10 y b == 5
+    </pre>
+
+    <h3>Direcciones de memoria y <code>id()</code></h3>
+    <p>
+      Todo valor se guarda en una dirección de memoria. Las variables apuntan a esa dirección.
+      Puedes verlo con la función <code>id()</code>:
+    </p>
+    <pre class="code">
+x = 10
+print("Valor:", x)
+print("id(x):", id(x))
+    </pre>
+
+    <p>Si cambias el valor, Python crea una nueva referencia de memoria.</p>
+
+    <h3>Modificar variables</h3>
+    <pre class="code">
+contador = 1
+contador = contador + 1   # ahora contador vale 2
+contador += 1             # forma abreviada: ahora vale 3
+    </pre>
+
+    <h3>Tipos de datos (con ejemplos)</h3>
+    <ul>
+      <li><strong>int</strong> — enteros: <code>5, -3, 0</code></li>
+      <li><strong>float</strong> — decimales: <code>3.14, -0.5</code></li>
+      <li><strong>str</strong> — texto: <code>"Hola", 'Mundo'</code></li>
+      <li><strong>bool</strong> — booleanos: <code>True, False</code></li>
+      <li><strong>list</strong> — listas: <code>[1,2,3]</code></li>
+      <li><strong>dict</strong> — diccionarios: <code>{"nombre":"Ana"}</code></li>
+    </ul>
+
+    <h3>Conversión de tipos</h3>
+    <p>
+      Cuando usas <code>input()</code>, los valores ingresados se guardan como texto (<code>str</code>).
+      Para trabajar con números, debes convertirlos:
+    </p>
+    <pre class="code">
+a = input("Número A: ")     # '12' (str)
+b = input("Número B: ")     # '3'  (str)
+a = int(a)
+b = int(b)
+print("Suma:", a + b)
+    </pre>
+
+    <h3>Errores comunes</h3>
+    <ul>
+      <li>Intentar sumar texto sin convertirlo a número.</li>
+      <li>Usar una variable que no fue creada (<code>NameError</code>).</li>
+      <li>Confundir <code>=</code> (asignación) con <code>==</code> (comparación).</li>
+    </ul>
+
+    <h3>Buenas prácticas</h3>
+    <ol>
+      <li>Usa nombres descriptivos: <code>nota_final</code> en lugar de <code>n</code>.</li>
+      <li>Usa <code>snake_case</code> (ejemplo: <code>mi_variable</code>).</li>
+      <li>No uses una variable para más de una función.</li>
+      <li>Evita variables globales innecesarias.</li>
+      <li>Comenta cuando el propósito no sea obvio.</li>
+    </ol>
+
+    <h3>Gestión de memoria</h3>
+    <p>
+      Python administra automáticamente la memoria con un recolector de basura.
+      Cuando una variable deja de usarse, su espacio se libera automáticamente.
+    </p>
+
+    <h3>Ejercicio: calculadora simple</h3>
+    <p>
+      Crea un programa que pida dos números y calcule la suma, resta, multiplicación y división:
+    </p>
+    <pre class="code">
+a = int(input("Número 1: "))
+b = int(input("Número 2: "))
+
+print("Suma:", a + b)
+print("Resta:", a - b)
+print("Producto:", a * b)
+print("División:", a / b)
+    </pre>
+  </section>
+
+  <!-- PARTE 3: REPASO Y TAREAS -->
+  <section class="card" id="repaso-tarea">
+    <h2>🧩 Repaso, tareas y siguientes pasos</h2>
+
+    <h3>Resumen</h3>
+    <ul>
+      <li>La lógica organiza pasos: entrada → proceso → salida.</li>
+      <li>Las variables guardan valores en memoria.</li>
+      <li>Python detecta los tipos automáticamente, pero debes convertir cuando operas con números.</li>
+      <li>Las buenas prácticas hacen tu código más fácil de entender.</li>
+    </ul>
+
+    <h3>Tarea</h3>
+    <ol>
+      <li>Escribe un programa que pida nombre, edad, ciudad y materia favorita, y lo muestre en una sola línea.</li>
+      <li>Modifica una variable (por ejemplo, aumenta tu edad en 1) y muestra el resultado.</li>
+      <li>Haz un pseudocódigo que calcule el promedio de 5 notas.</li>
+    </ol>
+
+    <div class="media-row">
+      <img class="illustration" src="https://pbs.twimg.com/media/EmZVlhjW8AEXiVB?format=jpg&name=small" alt="motivacion">
+      <div class="note">
+        📝 Consejo: practicar un poco cada día es la clave para dominar la programación.
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <a class="nav-btn secondary" href="clase1.html" title="Volver a Clase 1">⬅️ Volver a Clase 1</a>
+      <a class="nav-btn secondary" href="proximamente.html" title="Ir a Clase 3 (próximamente)">➡️ Ir a Clase 3</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 — Clase 2: Lógica & Variables · Profesor: Ing. Arley Melo</p>
+  </footer>
+
+</body>
+</html>

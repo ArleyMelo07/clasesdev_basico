@@ -1,0 +1,134 @@
+/* Estilos base */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f8f6;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #0b6623, #178a38);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.header p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* SECCIÓN PRINCIPAL */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.intro {
+  text-align: center;
+  max-width: 800px;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.btn-iniciar {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: #0b6623;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn-iniciar:hover {
+  background: #0e7a2b;
+}
+
+/* ACORDEÓN */
+.accordion-section {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.accordion-btn {
+  background-color: #1c7430;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.accordion-btn:hover {
+  background-color: #218838;
+}
+
+.accordion-btn.active {
+  background-color: #186229;
+}
+
+.accordion-content {
+  background: #ffffff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 1rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-content p {
+  margin: 1rem 0;
+}
+
+.link-clase {
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  background-color: #0b6623;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.link-clase:hover {
+  background-color: #0e7a2b;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #0b6623;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
