@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clase 3 - Repaso de Variables y Tipos de Datos</title>
+  <link rel="stylesheet" href="./styles/clase2.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>Clase 3: Repaso — Variables, Tipos de Datos y Buenas Prácticas</h1>
+      <p class="subtitle">Fortalece tus bases en programación comprendiendo cómo funcionan las variables y los datos en Python</p>
+
+      <div class="nav-buttons">
+        <a class="nav-btn" href="clase2.html" title="Volver a Clase 2">⬅️ Volver a Clase 2</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- OBJETIVOS -->
+  <section class="card" id="objetivos">
+    <h2>🎯 Objetivos de aprendizaje</h2>
+    <ul>
+      <li>Reforzar el uso de variables y tipos de datos básicos.</li>
+      <li>Comprender cómo Python interpreta y almacena los diferentes tipos de información.</li>
+      <li>Identificar errores comunes al trabajar con variables.</li>
+      <li>Aplicar buenas prácticas para escribir código más claro y organizado.</li>
+    </ul>
+  </section>
+
+  <!-- SECCIÓN 1: REPASO DE VARIABLES -->
+  <section class="card" id="repaso-variables">
+    <h2>💾 Parte 1 — Repaso de Variables</h2>
+
+    <p>Recordemos que una <strong>variable</strong> es un espacio en la memoria donde se guarda información que puede cambiar mientras el programa se ejecuta.</p>
+
+    <div class="media-row">
+      <img class="illustration" src="https://elpythonista.com/wp-content/uploads/2020/11/Variables_En_Python-1-768x432.jpg" alt="Variables en Python">
+      <div class="note">
+        🧠 Una buena práctica es usar nombres descriptivos y en minúsculas, separados por guiones bajos (<code>_</code>).
+      </div>
+    </div>
+
+    <pre class="code">
+# Ejemplo básico
+nombre = "Carlos"
+edad = 20
+promedio = 4.5
+
+print("Nombre:", nombre)
+print("Edad:", edad)
+print("Promedio:", promedio)
+    </pre>
+
+    <p>
+      En este ejemplo, cada variable tiene un tipo de dato diferente:
+      <code>str</code> (texto), <code>int</code> (entero) y <code>float</code> (decimal).
+    </p>
+  </section>
+
+  <!-- SECCIÓN 2: TIPOS DE DATOS -->
+  <section class="card" id="tipos-datos">
+    <h2>🔢 Parte 2 — Tipos de datos en Python</h2>
+
+    <p>Python tiene varios tipos de datos básicos. Estos son los más usados:</p>
+
+    <ul>
+      <li><strong>int</strong>: números enteros (<code>10, -5, 0</code>)</li>
+      <li><strong>float</strong>: números con decimales (<code>3.14, -2.5</code>)</li>
+      <li><strong>str</strong>: texto (<code>"Hola", 'Python'</code>)</li>
+      <li><strong>bool</strong>: valores lógicos (<code>True, False</code>)</li>
+    </ul>
+
+    <p>Para saber el tipo de dato de una variable puedes usar la función <code>type()</code>:</p>
+
+    <pre class="code">
+a = 10
+b = 3.5
+c = "Hola"
+d = True
+
+print(type(a))  # <class 'int'>
+print(type(b))  # <class 'float'>
+print(type(c))  # <class 'str'>
+print(type(d))  # <class 'bool'>
+    </pre>
+
+    <div class="note">
+      📝 Consejo: antes de operar con una variable, asegúrate de conocer su tipo. Esto evitará muchos errores.
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: ASIGNACIONES Y CONVERSIONES -->
+  <section class="card" id="asignaciones">
+    <h2>🧮 Parte 3 — Asignaciones y conversiones</h2>
+
+    <h3>Asignación básica</h3>
+    <pre class="code">
+x = 5
+y = 10
+resultado = x + y
+print("El resultado es:", resultado)
+    </pre>
+
+    <h3>Asignación múltiple</h3>
+    <p>Permite declarar varias variables en una sola línea:</p>
+    <pre class="code">
+nombre, edad, ciudad = "Ana", 18, "Medellín"
+print(nombre, edad, ciudad)
+    </pre>
+
+    <h3>Conversión de tipos</h3>
+    <p>Cuando se usan datos ingresados por teclado, es común convertirlos a número para hacer operaciones:</p>
+    <pre class="code">
+numero1 = int(input("Ingresa un número: "))
+numero2 = float(input("Ingresa otro número: "))
+print("La suma es:", numero1 + numero2)
+    </pre>
+
+    <div class="note">
+      🔄 Recuerda: <code>int()</code> convierte texto a número entero, <code>float()</code> a decimal y <code>str()</code> a texto.
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: BUENAS PRÁCTICAS -->
+  <section class="card" id="buenas-practicas">
+    <h2>🧠 Parte 4 — Buenas prácticas al usar variables</h2>
+
+    <ul>
+      <li>Usa nombres descriptivos: <code>nota_final</code> es mejor que <code>n</code>.</li>
+      <li>No empieces nombres con números ni uses espacios (usa guion bajo).</li>
+      <li>Evita cambiar el tipo de una variable a menos que sea necesario.</li>
+      <li>Comenta el código cuando sea útil para recordar su propósito.</li>
+      <li>Evita escribir todo en una sola línea. La claridad es más importante que la rapidez.</li>
+    </ul>
+
+    <div class="hint">
+      💡 Consejo: Escribe tu código pensando en que otra persona (o tú mismo en el futuro) deba entenderlo fácilmente.
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: EJERCICIOS DE REPASO -->
+  <section class="card" id="ejercicios">
+    <h2>🧩 Parte 5 — Ejercicios de repaso</h2>
+
+    <ol>
+      <li>Crea un programa que pida tu nombre, edad y ciudad, y los muestre en una sola línea formateada.</li>
+      <li>Declara tres variables numéricas y calcula su promedio.</li>
+      <li>Convierte un número decimal a entero usando <code>int()</code> y observa qué ocurre.</li>
+      <li>Escribe un programa que cambie los valores de dos variables (intercambio).</li>
+      <li>Investiga qué ocurre si sumas texto y números. ¿Por qué sucede?</li>
+    </ol>
+
+    <div class="media-row">
+      <img class="illustration" src="https://www.codigofuente.org/wp-content/uploads/2018/10/codpython.jpg" alt="Ejercicios de repaso en Python">
+      <div class="note">
+        🧩 Practica estos ejercicios hasta que puedas resolverlos sin mirar el ejemplo. La práctica crea confianza.
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <a class="nav-btn secondary" href="clase2.html" title="Volver a Clase 2">⬅️ Volver a Clase 2</a>
+      <a class="nav-btn secondary" href="proximamente.html" title="Ir a Clase 4 (próximamente)">➡️ Ir a Clase 4</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 — Clase 3: Repaso de Variables y Tipos de Datos · Profesor: Ing. Arley Melo</p>
+  </footer>
+
+</body>
+</html>
